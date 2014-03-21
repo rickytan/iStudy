@@ -1,0 +1,240 @@
+body{ background:#fdfdfd; overflow: hidden;font-family: Arial,serif,宋体,sans-serif;font-size: 12px;}
+html *{outline:0;zoom:1;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;} table{/*border-collapse:collapse;border-spacing:0;*/} fieldset,a img{border:0;} address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal;} li{list-style:none;} caption,th{text-align:left;} h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;} q:before,q:after{content:'';}
+
+.clear{ clear:both;}/* 清除浮动*/
+
+.container{
+    width:520px ;
+    height:auto;
+    margin:0 auto;
+    padding:0px;
+    overflow: hidden;
+}
+
+.left{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80px;
+    background: url("../img/left.jpg") 50% 50% no-repeat;
+    background-size:100% 100%;
+    z-index: 101;
+}
+.content{
+    border: 1px solid #bbcee9;
+    margin-top: 30px;
+    min-height: 400px;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: relative;
+    -webkit-padding-start:80px;
+    z-index: 100;
+}
+.main{
+    position: relative;
+}
+
+/*标签页*/
+.tab{
+    width: 100%;
+    height: auto;
+    margin-top: 36px;
+}
+.tab a{
+    color: inherit;
+    text-align: inherit;
+    text-decoration: none;
+}
+.tab ul li{
+    background: #bbcee9;
+    padding: 4px 0px 4px 8px;
+    line-height: 16px;
+    font-size: 14px;
+    margin-top: 4px;
+    border-top-left-radius: 8px;
+    text-align: right;
+    color: black;
+    cursor: pointer;
+    opacity:0.8;
+}
+.tab ul li.current,.tab ul li:hover{
+    background: #5589e9;
+}
+
+#trash{
+    border-bottom: #f30 solid 1px;
+    height: 24px;
+    width: 100%;
+    text-align: center;
+    line-height: 24px;
+}
+#tabs{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 400px;
+}
+@-webkit-keyframes jump {
+    from {
+    right:0px;
+}
+to {
+    right:-6px;
+}
+}
+#favorite_tab.actived{
+    position: relative;
+    -webkit-animation-name: jump;
+    -webkit-animation-duration: .35s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-direction: alternate;
+}
+#favorite_tab.hover{
+    background-color: orange;
+    -webkit-box-shadow:orange 0px -4px 4px;
+}
+#favorite li.placeholder{
+    background: lightblue;
+    border: aqua inset solid 1px;
+}
+#trash {
+    display: none;
+}
+#trash.hover{
+    background: -webkit-gradient(linear,left top,left bottom,from(red), to(rgba(255, 255, 255, 1)));
+}
+#inputDialog *{
+    margin-bottom: 4px;
+    border-radius: 4px;
+}
+#recomand{
+    width:auto;
+    margin:8px 20px;
+    border:1px solid #ccc;
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 2px 3px #ccc;
+    height:27px;
+    line-height:27px;
+    background: url(../img/rec.gif) repeat-x 0 0;
+    font-family:serif,'宋体';
+    font-size: 12px;
+    word-spacing:0.5em;
+    text-align: center;
+    display: none;
+}
+#recomand span{
+    color:red;
+    font-weight: bold;
+}
+#recomand a{
+    margin: 2px 6px 2px 2px;
+}
+#search_div{
+    position: absolute;
+    height: 30px;
+    top: -30px;
+    left: 80px;
+}
+#search_words{
+    padding: 4px 5px;
+    font-size: 100%;
+    border-radius: 10px;
+    border: 1px solid #CCC;
+    outline: 0;
+    overflow: visible;
+}
+div.panel{
+    display: none;
+    overflow: hidden;
+    position: relative;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+div.panel-sel{
+    display: block;
+}
+div.footer{ width:100%; height:24px; border-top:#CCC solid 1px;margin-top: 0.5em;}
+div.footer a{color: #f30;font-weight: bold;text-decoration: none;}
+.l1{
+    font-size: 16px;
+    font-style: normal;
+    color: rgb(120,200,240);
+    padding: 0px 8px;
+    border: 0;
+    border-bottom: rgb(201,228,214) solid 1px;
+    display: block;
+    height: 25px;
+    z-index: 100;
+}
+.l1-list{
+    padding: 4px 6px 0px 6px;
+    float: left;
+    display: block;
+    margin: 4px 2px 0px 2px;
+    text-align: center;
+    cursor: pointer;
+    background:-webkit-gradient(linear, left top, left bottom, from(rgba(200, 200, 240, 1)), to(rgba(255, 255, 255, 1)));
+    border: rgb(201,228,214) solid 1px;
+    z-index: 101;
+    line-height: 16px;
+    border-top-left-radius:10px;
+}
+.l1-list:hover,.l1-list-sel{
+    border-bottom: #fff solid 1px;
+    padding: 4px 2px 0px 2px;
+    color: rgb(0,91,172);
+    font-size: 18px;
+}
+.l2{
+    background: -webkit-linear-gradient(left, #bbcee9, #bbcee9 97%, #aabedc);
+    overflow: auto;
+}
+.l2-list{
+    display: block;
+    float: left;
+    padding: 4px;
+    line-height: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+.l2-list-sel,.l2-list:hover{
+    background:-webkit-linear-gradient(left, #5589e9, #5589df 97%, #aabedc);
+}
+.l3{
+    overflow: auto;
+    background: #fff url("../img/dash.gif") repeat;
+}
+.l3 li{
+    display: block;
+    width: 33%;
+    float: left;
+    height: 26px;
+    line-height: 26px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+}
+.l3 li a,.l3 li a:visited,.l3 li a:active{
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial,'宋体';
+    font-size: 12px;
+    color: blue;
+}
+.l3 li a:hover{
+    color:orange;
+}
+.l3 li em{
+    color: red;
+}

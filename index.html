@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>iStudy网址导航</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="keywords" content="iStudy网址导航" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <meta name="copyright" content="2011-2012 iStuey Tech." />
+        <meta name="MSSmartTagsPreventParsing" content="True" />
+        <base target="_blank" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/smoothness/jquery-ui-1.8.20.custom.css" />
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/index.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <!--
+            <div id="recomand">
+                <span>推荐栏：</span>
+            </div>
+        -->
+            <div class="main">
+                <div class="left">
+                    <div class="tab" id="tabNav">
+                        <ul>
+                            <li id="favorite_tab">我的收藏：</li>
+                            <li class="current">常用站点：</li>
+                            <li>应用精选：</li>
+                            <li>访问历史：</li>
+                            <li>最新添加：</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <div id="search_div">
+                        <label for="search_words">搜索：</label>
+                        <input name="search_words" type="text" value="" id="search_words" placeholder="请输入网站名或拼音" lang="zh-CN" x-webkit-grammar="builtin:search" x-webkit-speech/>
+                        <span>有Bug?提意见?请<a href="http://istudy.zuss.zju.edu.cn/forum/forum.php?mod=viewthread&tid=2149">点我</a></span>
+                    </div>
+                    <div id="tabs">
+                        <div class="l3" id="search_result"></div>
+                        <div class="panel">
+                            <div id="trash">拖动到此处删除</div>
+                            <ul class="l3" id="favorite"></ul>
+                            <button type="button" id="addFav"></button>
+                        </div>
+                        <div class="panel panel-sel">
+                            <ul class="l1">
+                                <li class="l1-list" id="1073">学园院系</li>
+                                <li class="l1-list" id="1074">生活娱乐</li>
+                                <li class="l1-list"  id="1082">学习科研</li>
+                                <li class="l1-list" id="1102">行政管理</li>
+                                <li class="l1-list" id="1093">勤工助学</li>
+                            </ul>
+                            <ul class="l2">
+                            </ul>
+                            <div class="clear"></div>
+                            <ul id="indexhtml" class="l3">
+                            </ul>
+                        </div>
+                        <div class="panel">
+                            <ul class="l3" id="apps"></ul>
+                        </div>
+                        <div class="panel">
+                            <ul class="l3" id="history"></ul>
+                            <button type="button" id="clsHist"></button>
+                        </div>
+                        <div class="panel">
+                            <ul class="l3" id="recent"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                iStudy上网导航插件v<span id="version"></span> Copyright © <a href="http://istudy.zuss.zju.edu.cn/">iStudy Tech.</a> 2011-2012.
+            </div>
+        </div>
+        <div id="inputDialog" style="display: none" title="请输入您要添加的链接：">
+            <label for="title">网址名称：</label>
+            <input name="title" type="text" placeholder="网站名" value="" /><br/>
+            <label for="link">网址链接：</label>
+            <input name="link" type="text" value="http://" />
+        </div>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="css/options.css" />
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/index.min.js"></script>
+        <script type="text/javascript" src="js/options.js"></script>
+    </head>
+    <body>
+        <form name="options" action="">
+            <div class="main">
+                <h1>设置</h1>
+                <a href="http://istudy.zuss.zju.edu.cn/"><img alt="iStudy网址导航"  id="logo" src="./icon.png" /></a>
+                <hr />
+                <div class="section">
+                    <h3>搜索方式</h3>
+                    <div>
+                        <div>
+                            <input type="radio" name="search_method" value="1" /><span>回车再搜</span></div><div>
+                            <input type="radio" name="search_method" value="2" checked="checked" /><span>即打即搜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <h3>显示推荐栏</h3>
+                    <input type="checkbox" name="show_recomand" value="ON" checked="checked" />
+                </div>
+                <div class="section">
+                    <h3>访问历史</h3>
+                    <div>
+                        显示<select name="visit_history">
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="40">40</option>
+                        </select>条</div>
+                </div>
+                <div class="section">
+                    <h3>数据更新</h3>
+                    <div>
+                        <button type="button" id="syncData">立即更新</button>
+                        <progress id="syncProg" value="0" max ="1" style="display: none"></progress>
+                        <div class="error"></div>
+                    </div>
+                </div>
+                <hr />
+                <button type="button" id="save">保存</button>
+                <button type="button" id="default">初始化</button>
+                <div class="footer">
+                    Copyright &copy; <a href="http://istudy.zuss.zju.edu.cn/">iStudy Tech.</a> 2011-2012.
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
